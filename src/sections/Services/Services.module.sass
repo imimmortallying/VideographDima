@@ -1,0 +1,50 @@
+
+.services
+    &_beforeCenter_bgc
+        grid-row: 10/11
+        grid-column: 1/center-start
+    &_afterCenter_bgc
+        grid-row: 10/11
+        grid-column: center-end/-1
+    &_beforeCenter_bgc, &_afterCenter_bgc
+       background-color: $bgc-color1
+    grid-column: center-start/center-end   
+    grid-row: 10/11
+    background-color: $bgc-color1
+    &_title
+        font-size: 6rem
+        text-transform: uppercase
+        font-weight: 600
+        color:$primary-color
+    &_body
+        display: grid
+        grid-template-rows: repeat(2, min-content)
+        grid-template-columns: repeat(auto-fill, minmax(36rem, 1fr))
+        gap: 5rem
+
+    // children card
+    &_cardContainer
+        display: flex
+        flex-direction: column
+        background-color: $bgc-color3
+        padding: 3rem
+        gap: 3rem
+        border-radius: 1rem
+
+    &_cardTitle
+        font-size: 4.5rem
+        font-weight: 700
+        text-transform: uppercase
+        line-height: 5rem
+        min-height: 10rem
+        text-align: center
+        align-content: center
+
+    &_cardDescription
+        font-size: 1.8rem
+
+    &_cardPrice
+        font-size: 1.8rem
+        color: $third-color
+        margin-top: auto
+        

@@ -1,0 +1,48 @@
+
+.workStages
+    &_beforeCenter_bgc
+        grid-row: 13/14
+        grid-column: 1/center-start
+    &_afterCenter_bgc
+        grid-row: 13/14
+        grid-column: center-end/-1
+    &_beforeCenter_bgc, &_afterCenter_bgc
+       background-color: $bgc-color1
+    grid-column: center-start/center-end   
+    grid-row: 13/14
+    background-color: $bgc-color1
+    &_title
+        font-size: 6rem
+        text-transform: uppercase
+        font-weight: 600
+        color:$primary-color
+
+    &_cardContainer
+        display: flex
+        flex-direction: column
+        background-color: $bgc-color3
+        padding: 3rem
+        gap: 1rem
+        border-radius: 1rem
+
+    &_cardTitle
+        font-size: 8rem
+        font-weight: 700
+        line-height: 8rem
+        color: $third-color
+
+    &_cardName
+        font-size: 4.5rem
+        font-weight: 700
+        text-transform: uppercase
+        line-height: 5rem
+        min-height: 10rem
+
+    &_cardDescription
+        font-size: 1.8rem
+
+    &_body
+        display: grid
+        grid-template-rows: repeat(2, min-content)
+        grid-template-columns: repeat(auto-fill, minmax(36rem, 1fr))
+        gap: 5rem

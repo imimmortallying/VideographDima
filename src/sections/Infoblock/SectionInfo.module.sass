@@ -1,0 +1,39 @@
+
+.section_info
+    &_beforeCenter_bgc
+        grid-row: 2/3
+        grid-column: 1/center-start
+    &_afterCenter_bgc
+        grid-row: 2/3
+        grid-column: center-end/-1
+    &_beforeCenter_bgc, &_afterCenter_bgc
+       background-color: $bgc-color1
+    grid-row: 2/3
+    grid-column: center-start/center-end
+    background-color: $bgc-color1
+    display: grid
+    grid-template-rows: repeat(2, min-content)
+    // grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+    grid-template-columns: repeat(2, minmax(min-content, 1fr))
+    color:$primary-color
+
+.header
+    grid-row: 1/2
+    grid-column: 1/-1
+    font-size: 6rem
+    text-transform: uppercase
+    font-weight: 600
+    color:$primary-color
+
+.person
+    grid-row: 2/-1
+    grid-column: 1/2
+    
+.about_container
+    grid-column: 2/-1
+    grid-row: 2/-1
+    font-size: 2rem
+    display: grid
+    grid-template-rows: repeat(2, 1fr)
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+    grid-gap: 3rem

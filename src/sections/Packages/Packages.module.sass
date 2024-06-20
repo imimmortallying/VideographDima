@@ -1,0 +1,23 @@
+
+.packages
+    &_beforeCenter_bgc
+        grid-row: 11/12
+        grid-column: 1/center-start
+    &_afterCenter_bgc
+        grid-row: 11/12
+        grid-column: center-end/-1
+    &_beforeCenter_bgc, &_afterCenter_bgc
+       background-color: $bgc-color1
+    grid-column: center-start/center-end   
+    grid-row: 11/12
+    background-color: $bgc-color1
+    &_title
+        font-size: 6rem
+        text-transform: uppercase
+        font-weight: 600
+        color:$primary-color
+    &_body
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: min-content
+        gap: 3rem

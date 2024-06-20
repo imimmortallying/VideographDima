@@ -1,0 +1,42 @@
+
+*, ::after, ::before    
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+    font-family: "Oswald", sans-serif
+
+.container
+    display: grid
+    grid-template-rows: 100vh repeat(2, min-content)
+    grid-template-columns: [buffer-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [center-end]
+
+.orderForm1
+    // &_beforeCenter_bgc
+    //     grid-row: 9/10
+    //     grid-column: 1/center-start
+    // &_afterCenter_bgc
+    //     grid-row: 9/10
+    //     grid-column: center-end/-1
+    &_beforeCenter_bgc, &_afterCenter_bgc
+       background-color: $bgc-color1
+    grid-row: 9/10
+    grid-column: center-start/center-end
+    background-color: $bgc-color1
+
+.orderForm2
+    // &_beforeCenter_bgc
+    //     grid-row: 17/18
+    //     grid-column: 1/center-start
+    // &_afterCenter_bgc
+    //     grid-row: 17/18
+    //     grid-column: center-end/-1
+    &_beforeCenter_bgc, &_afterCenter_bgc
+       background-color: $bgc-color1
+    grid-row: 17/18
+    grid-column: center-start/center-end
+    background-color: $bgc-color1
+
+

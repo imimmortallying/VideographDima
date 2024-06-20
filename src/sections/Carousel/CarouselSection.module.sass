@@ -1,0 +1,40 @@
+
+.carouselSection_header
+    grid-row: 7/8
+    grid-column: center-start/center-end
+    font-size: 6rem
+    text-transform: uppercase
+    font-weight: 600
+    color:$primary-color
+    background-color: $bgc-color2
+
+.carouselSection
+    &_beforeCenter_bgc
+        grid-row: 7/8
+        grid-column: 1/center-start
+    &_afterCenter_bgc
+        grid-row: 7/8
+        grid-column: center-end/-1
+    &_beforeCenter_bgc, &_afterCenter_bgc
+       background-color: $bgc-color2
+    grid-row: 8/9
+    grid-column: 1/-1
+    font-size: 6rem
+    text-transform: uppercase
+    font-weight: 600
+    color:$primary-color
+    background-color: #efc5c5
+
+.slider_container
+    padding: 5rem // позволяет увидеть стрелки слайдера
+    background-color: $bgc-color2
+
+.item
+    width: 60rem
+    height: 80vh
+
+.slick-center
+    // transform: scaleY(1.1)
+
+
+

@@ -1,0 +1,39 @@
+
+.review
+    &_bubble
+        position: relative
+        background: $bgc-color3
+        border-radius: .4em
+        font-size: 2rem
+        margin-bottom: 3rem
+        padding: 3rem
+        &:after 
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 7.5rem
+            width: 0
+            height: 0
+            border: 2rem solid transparent
+            border-top-color: $bgc-color3
+            border-bottom: 0
+            margin-left: -2rem
+            margin-bottom: -2rem
+
+    &_highlighted
+        color: $third-color
+        margin-left: .7rem
+    &_image
+        width: 15rem
+        height: 15rem
+        object-fit: cover
+        border-radius: 50%
+
+    &_personContainer
+        display: flex
+        gap: 2rem
+
+    &_title
+        color: $primary-color
+        font-size: 2rem
+        align-content: flex-end
