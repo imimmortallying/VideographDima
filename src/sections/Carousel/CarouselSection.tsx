@@ -41,7 +41,7 @@ const videosData = [
   { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg1 },
 ];
 
-export const CarouselSection = ({ className }: CarouselSectionProps) => {
+export const CarouselSection = ({}: CarouselSectionProps) => {
   return (
     <>
       <div className={cls.carouselSection_beforeCenter_bgc}></div>

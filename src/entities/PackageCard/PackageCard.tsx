@@ -10,7 +10,6 @@ interface PackageCardProps {
 }
 
 export const PackageCard = ({
-  className,
   about,
   description,
   title,
@@ -24,10 +23,14 @@ export const PackageCard = ({
       <div className={cls.card_about}>
         <div className={cls.card_aboutItem}></div>
         {about.map((item, i) => (
-          <div key={i} className={cls.card_aboutItem}>{item}</div>
+          <div key={i} className={cls.card_aboutItem}>
+            {item}
+          </div>
         ))}
       </div>
-      <Button type="default" className={cls.card_button}>Рассчитать стоимость</Button>
+      <Button type="default" className={cls.card_button}>
+        Рассчитать стоимость
+      </Button>
     </div>
   );
 };

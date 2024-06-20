@@ -3,7 +3,7 @@ import Header from "../sections/Header/Header";
 import SectionInfo from "../sections/Infoblock/SectionInfo";
 import { ReactNode, useState } from "react";
 import ModalWindow from "../entities/Modal/ModalWindow";
-import { ConfigProvider, theme } from "antd";
+import { ConfigProvider } from "antd";
 import Showreal from "../sections/Showreal/Showreal";
 import { RequestForm } from "../entities/RequestForm/RequestForm";
 import YouTubeVideo from "../entities/YouTubeVideo/YouTubeVideo";

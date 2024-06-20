@@ -4,7 +4,7 @@ interface BurgerProps {
   className?: string
 }
 
-function Burger({className}:BurgerProps) {
+function Burger({}:BurgerProps) {
   return (
     <div className={cls.burger}>
       <ul className={cls.burger_list}>

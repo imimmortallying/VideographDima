@@ -58,7 +58,7 @@ const packagesCardsData = [
   },
 ];
 
-export const Packages = ({ className }: PackagesProps) => {
+export const Packages = ({}: PackagesProps) => {
   return (
     <>
       <div className={cls.packages_beforeCenter_bgc}></div>

@@ -40,7 +40,7 @@ const reviewsData = [
   },
 ];
 
-export const Reviews = ({ className }: ReviewsProps) => {
+export const Reviews = ({}: ReviewsProps) => {
   return (
     <>
       <div className={cls.reviews_beforeCenter_bgc}></div>

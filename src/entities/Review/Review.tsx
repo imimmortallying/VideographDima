@@ -9,7 +9,6 @@ interface ReviewProps {
 }
 
 export const Review = ({
-  className,
   imgSrc,
   bubbleText,
   title,

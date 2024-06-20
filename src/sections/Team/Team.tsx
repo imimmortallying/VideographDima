@@ -4,7 +4,7 @@ interface TeamProps {
   className?: string;
 }
 
-export const Team = ({ className }: TeamProps) => {
+export const Team = ({}: TeamProps) => {
   return (
     <>
       <div className={cls.team_beforeCenter_bgc}></div>

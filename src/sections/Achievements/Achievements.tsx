@@ -4,7 +4,7 @@ interface AchievementsProps {
   className?: string;
 }
 
-export const Achievements = ({ className }: AchievementsProps) => {
+export const Achievements = ({}: AchievementsProps) => {
   return (
     <>
       <div className={cls.achievements_beforeCenter_bgc}></div>

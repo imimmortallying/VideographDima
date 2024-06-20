@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, HTMLAttributes } from "react";
+import { ButtonHTMLAttributes } from "react";
 import cls from "./Button.module.sass";
 
 type ButtonStyles = "rectangle" | "roundedH6rem" | 'rectangleAglow';

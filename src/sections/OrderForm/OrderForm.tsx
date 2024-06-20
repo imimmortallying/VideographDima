@@ -12,7 +12,6 @@ interface OrderFormProps {
 }
 
 export const OrderForm = ({
-  className,
   description,
   title,
   positionClassName,

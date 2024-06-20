@@ -7,7 +7,7 @@ interface RequestFormProps {
     className?: string;
 }
 
-export const RequestForm = ({className}:RequestFormProps) => {
+export const RequestForm = ({}:RequestFormProps) => {
     return (
         <Form onFinish={(values) => console.log(values)} className={cls.form}>
         <img src={GifHeader} alt="" className={cls.header_gif}/>

@@ -44,7 +44,7 @@ const cardsData = [
   },
 ];
 
-export const WorkStages = ({ className }: WorkStagesProps) => {
+export const WorkStages = ({}: WorkStagesProps) => {
   return (
     <>
       <div className={cls.workStages_beforeCenter_bgc}></div>

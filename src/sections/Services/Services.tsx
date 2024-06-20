@@ -44,7 +44,7 @@ const cardsData = [
   },
 ];
 
-export const Services = ({ className }: ServicesProps) => {
+export const Services = ({}: ServicesProps) => {
   return (
     <>
       <div className={cls.services_beforeCenter_bgc}></div>

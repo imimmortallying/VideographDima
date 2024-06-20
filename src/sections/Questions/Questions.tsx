@@ -1,5 +1,4 @@
 import cls from "./Questions.module.sass";
-import type { CollapseProps } from "antd";
 import { Collapse } from "antd";
 
 interface QuestionsProps {
@@ -24,25 +23,8 @@ const questionsData = [
 const accordionItems = questionsData.map((elem, i)=> {
     return {key: i, label: elem.label, children: <p>{elem.text}</p>} 
 })
-// const items: CollapseProps["items"] = [
-//   {
-//     key: "1",
-//     label: "This is panel header 1",
-//     children: <p>{text}</p>,
-//   },
-//   {
-//     key: "2",
-//     label: "This is panel header 2",
-//     children: <p>{text}</p>,
-//   },
-//   {
-//     key: "3",
-//     label: "This is panel header 3",
-//     children: <p>{text}</p>,
-//   },
-// ];
 
-export const Questions = ({ className }: QuestionsProps) => {
+export const Questions = ({}: QuestionsProps) => {
   return (
     <>
       <div className={cls.questions_beforeCenter_bgc}></div>
