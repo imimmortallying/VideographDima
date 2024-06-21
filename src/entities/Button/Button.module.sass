@@ -10,6 +10,7 @@
         text-decoration: none
         display: inline-block
         box-shadow: $box-shadow
+
     
 
 .rectangle
@@ -22,6 +23,15 @@
 .pulse
     animation: borderPulse 1000ms infinite ease-out
     transition: all .2s
+
+.icon
+    display: inline-block
+    height: 3rem
+    fill: $primary-color
+    margin-right: 1rem
+
+    // vertical-align: middle
+    // width: rem
 
         
 
@@ -49,6 +59,8 @@
     &:hover
         background: $primary-color
         color: $secondary-color
+    &:hover .icon
+        fill: $fourth-color
 
 .thirdColor
     background: $third-color
@@ -100,6 +112,7 @@ $btn-color: $bgc-color1
     color: $primary-color
     background-color: $glow-color
     box-shadow: 0 0 1em .25em $glow-color, 0 0 4em 2em $glow-spread-color, inset 0 0 .75em .25em $glow-color
+
 
 
 .rectangleAglow:active 

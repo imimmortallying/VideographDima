@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 import cls from "./Button.module.sass";
 
 type ButtonStyles = "rectangle" | "roundedH6rem" | 'rectangleAglow';
@@ -14,14 +14,15 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   buttonStyle: ButtonStyles;
   buttonColor: ButtonColors;
   className: string;
+  icon?: ReactNode
   onClick?: () => void;
 }
 
-function Button({ textContent, buttonStyle, className, buttonColor, onClick }: ButtonProps) {
+function Button({ textContent, buttonStyle, className, buttonColor, onClick, icon}: ButtonProps) {
   return (
     <div>
       <a onClick={onClick} className={`${cls.button} ${className} ${cls[buttonStyle]} ${cls[buttonColor]}`}>
-        {textContent}
+        {icon ? <div className={cls.icon}>{icon}</div> : ''}{textContent}
       </a>
     </div>
   );
