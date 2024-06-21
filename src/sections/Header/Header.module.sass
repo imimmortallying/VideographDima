@@ -6,17 +6,45 @@
     display: flex
     position: relative
     font-weight: 400
-    // font-family: "Oswald", Arial, sans-serif
 
+    &_box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center 
+        width: 100%
+        display: flex
+        flex-direction: column
+        padding: 0 6rem
+        // gap: 15rem
+        @include respond(phone)
+            gap: 3rem
+            position: relative
+            justify-content: center
     &_button_request
         margin-top: 1rem
         padding: 1.5rem 15rem
+        font-size: 2rem
+        margin-top: 2rem
+        @include respond(phone)
+            width: 100%
+            padding-top: 2.4rem
+            padding-bottom: 2.4rem
+            font-size: 3rem
+            // padding: 
     &_button_tg
-        margin-top: 1rem
+        // margin-top: 1rem
         padding: 1rem 2rem
-
+        font-size: 2rem
+        margin-top: 2rem
+        @include respond(phone)
+            width: 80%
+            padding-top: 1.6rem
+            padding-bottom: 1.6rem
+            font-size: 2.4rem
     &_fader
-        font-size: 7rem
+        font-size: 8rem
         font-weight: 500
         color: $primary-color
         text-transform: uppercase
@@ -29,14 +57,6 @@
     top: 1rem
     left: 1rem
     height: 6rem
-
-.header_box
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    text-align: center 
-    width: 100%
 
 .title_second
     text-transform: uppercase
