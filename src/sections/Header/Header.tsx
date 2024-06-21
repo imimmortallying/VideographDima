@@ -24,8 +24,16 @@ function Header({ showModal }: Header) {
               title: "мы создаем уникальный видеоконтент",
               markedWord: "уникальный",
             },
-            { title: "видеосъемка для вашего бизнеса", markedWord: "бизнеса" },
-            { title: "видеопродакшен полного цикла", markedWord: "полного" },
+            {
+              title: "мы создаем уникальный видеоконтент",
+              markedWord: "уникальный",
+            },
+            {
+              title: "мы создаем уникальный видеоконтент",
+              markedWord: "уникальный",
+            },
+            // { title: "видеосъемка для вашего бизнеса", markedWord: "бизнеса" },
+            // { title: "видеопродакшен полного цикла", markedWord: "полного" },
           ]}
           className={cls.header_fader}
           markedWordClassName={cls.header_marked}

@@ -79,7 +79,7 @@ function App() {
             showModal(<RequestForm />, { content: { width: "80rem" } })
           }
         ></Header>
-        <SectionInfo></SectionInfo>
+        {/* <SectionInfo></SectionInfo>
         <Showreal
           showModal={() =>
             showModal(
@@ -128,7 +128,7 @@ function App() {
           isModalOpen={isModalOpen}
           children={modalContent}
           styles={modalStyles}
-        ></ModalWindow>
+        ></ModalWindow> */}
       </div>
     </ConfigProvider>
   );
