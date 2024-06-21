@@ -1,45 +1,45 @@
 import cls from "./App.module.sass";
 import Header from "../sections/Header/Header";
-import SectionInfo from "../sections/Infoblock/SectionInfo";
-import { ReactNode, useState } from "react";
-import ModalWindow from "../entities/Modal/ModalWindow";
 import { ConfigProvider } from "antd";
-import Showreal from "../sections/Showreal/Showreal";
-import { RequestForm } from "../entities/RequestForm/RequestForm";
-import YouTubeVideo from "../entities/YouTubeVideo/YouTubeVideo";
-import About from "../sections/About/About";
-import Portfolio from "../sections/Portfolio/Portfolio";
-import { ModalStyles } from "../entities/Modal/types";
-import { CarouselSection } from "../sections/Carousel/CarouselSection";
-import { OrderForm } from "../sections/OrderForm/OrderForm";
-import { Services } from "../sections/Services/Services";
-import { Packages } from "../sections/Packages/Packages";
-import { Team } from "../sections/Team/Team";
-import { WorkStages } from "../sections/WorkStages/WorkStages";
-import { Reviews } from "../sections/Reviews/Reviews";
-import { Questions } from "../sections/Questions/Questions";
-import { Achievements } from "../sections/Achievements/Achievements";
+// import { RequestForm } from "../entities/RequestForm/RequestForm";
+// import { ReactNode, useState } from "react";
+// import { ModalStyles } from "../entities/Modal/types";
+// import SectionInfo from "../sections/Infoblock/SectionInfo";
+// import ModalWindow from "../entities/Modal/ModalWindow";
+// import Showreal from "../sections/Showreal/Showreal";
+// import YouTubeVideo from "../entities/YouTubeVideo/YouTubeVideo";
+// import About from "../sections/About/About";
+// import Portfolio from "../sections/Portfolio/Portfolio";
+// import { CarouselSection } from "../sections/Carousel/CarouselSection";
+// import { OrderForm } from "../sections/OrderForm/OrderForm";
+// import { Services } from "../sections/Services/Services";
+// import { Packages } from "../sections/Packages/Packages";
+// import { Team } from "../sections/Team/Team";
+// import { WorkStages } from "../sections/WorkStages/WorkStages";
+// import { Reviews } from "../sections/Reviews/Reviews";
+// import { Questions } from "../sections/Questions/Questions";
+// import { Achievements } from "../sections/Achievements/Achievements";
 
 function App() {
   // modal window
   // вынести в хук? контекст?
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState<null | ReactNode>(null);
-  const [modalStyles, setModalStyles] = useState<ModalStyles>();
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [modalContent, setModalContent] = useState<null | ReactNode>(null);
+  // const [modalStyles, setModalStyles] = useState<ModalStyles>();
 
-  const showModal = (modalContent: ReactNode, modalStyles: ModalStyles) => {
-    setIsModalOpen(true);
-    setModalContent(modalContent);
-    setModalStyles(modalStyles);
-  };
+  // const showModal = (modalContent: ReactNode, modalStyles: ModalStyles) => {
+  //   setIsModalOpen(true);
+  //   setModalContent(modalContent);
+  //   setModalStyles(modalStyles);
+  // };
 
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
+  // const handleOk = () => {
+  //   setIsModalOpen(false);
+  // };
 
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
+  // const handleCancel = () => {
+  //   setIsModalOpen(false);
+  // };
 
   return (
     <ConfigProvider
@@ -75,9 +75,9 @@ function App() {
     >
       <div className={cls.container}>
         <Header
-          showModal={() =>
-            showModal(<RequestForm />, { content: { width: "80rem" } })
-          }
+          // showModal={() =>
+          //   showModal(<RequestForm />, { content: { width: "80rem" } })
+          // }
         ></Header>
         {/* <SectionInfo></SectionInfo>
         <Showreal

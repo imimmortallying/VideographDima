@@ -5,7 +5,7 @@ import Fader from "../../entities/Fader/Fader";
 import Button from "../../entities/Button/Button";
 
 interface Header {
-  showModal: () => void;
+  showModal?: () => void;
 }
 
 function Header({ showModal }: Header) {
