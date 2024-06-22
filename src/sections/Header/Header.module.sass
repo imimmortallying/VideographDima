@@ -2,12 +2,22 @@
 .header 
     grid-row: 1/2
     grid-column: 1/-1
-    background-color: #f5a3a3
-    // display: flex
+    // background-color: #f5a3a3
     display: block
     position: relative
     font-weight: 400
     padding: 2rem
+    z-index: 1
+
+    &_bgVideo
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        object-fit: cover
+        filter: brightness(0.5)
 
     &_box
         position: absolute
@@ -17,14 +27,7 @@
         text-align: center 
         width: 100%
         display: block
-        // display: flex
-        // flex-direction: column
         padding: 0 6rem
-        // gap: 15rem
-        // @include respond(phone)
-        //     gap: 3rem
-        //     position: relative
-        //     justify-content: center
     &_button_request
         margin-top: 1rem
         padding: 1.5rem 15rem
@@ -34,26 +37,26 @@
             width: 100%
             padding: 2.4rem 1rem
             font-size: 3rem
-            // padding: 
     &_button_tg
-        // margin-top: 1rem
-        padding: 1rem 2rem
         font-size: 2rem
         margin-top: 2rem
+        width: 35rem
+        height: 5rem
         @include respond(phone)
-            width: 80%
-            padding: 2.4rem 1rem
+            width: 70%
+            height: 7rem
             font-size: 2.4rem
     &_fader
         font-size: 8rem
         font-weight: 500
         color: $primary-color
         text-transform: uppercase
-        @include respond(phone)
-            line-height: 19rem
-
+        margin-top: 1rem
     &_marked
         color: $third-color
+
+    &_description
+        margin-top: 1rem
 
 .logo
     position: absolute
@@ -70,19 +73,16 @@
         font-size: 2.4rem
     
 .menu
-    background-color:#f5a3a3
-
-.menu_top
-    background-color:#f5a3a3
+    // background-color:#f5a3a3
+    background: none
+    text-transform: uppercase
+// .menu_top
+//     z-index: 5
 
 @media only screen and (max-width: 600px)
     .menu_top
         display: none
-    // .menu_icon
-    //     display: block
 
 @media only screen and (min-width: 600px)
     .menu_icon
         display: none
-    .menu_top
-        // width: min-content

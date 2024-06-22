@@ -54,6 +54,11 @@ function App() {
             colorIcon: "#FFFFFF",
             wireframe: true,
           },
+          Menu: {
+            colorText: "#ffffff",
+            itemHoverColor: "#ff6000",
+            colorPrimary: "#ff6000"
+          },
           Button: {
             // colorPrimary: "$third-color",
             fontFamily: '"Oswald", Arial, sans-serif',

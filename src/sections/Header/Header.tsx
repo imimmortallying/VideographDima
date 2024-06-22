@@ -5,6 +5,7 @@ import { Drawer, Menu } from "antd";
 import { useState } from "react";
 import { MenuOutlined } from "@ant-design/icons";
 import { TgIcon } from "../../entities/Icons/TgIcon/TgIcon";
+import bgVideo from "../../assets/Header/bgvideo.mp4";
 
 interface Header {
   showModal?: () => void;
@@ -20,7 +21,10 @@ function Header({ showModal }: Header) {
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <header className={cls.header}>
-      <div className={cls.menu_icon} style={{ backgroundColor: "#f5a3a3" }}>
+      <video className={cls.header_bgVideo} muted loop autoPlay>
+        <source src={bgVideo}></source>
+      </video>
+      <div className={cls.menu_icon}>
         <MenuOutlined
           onClick={() => setOpenMenu(true)}
           style={{ color: "white", fontSize: "4rem" }}
@@ -33,7 +37,7 @@ function Header({ showModal }: Header) {
           mode="horizontal"
           className={cls.menu}
           // style={{ height: "min-content", position: "absolute", right: 0}}
-          style={{ display: 'flex', justifyContent: "flex-end", border: 'none'}}
+          style={{ display: 'flex', justifyContent: "flex-end", border: 'none', zIndex: 5}}
         ></Menu>
       </span>
 
@@ -41,11 +45,14 @@ function Header({ showModal }: Header) {
         open={openMenu}
         onClose={() => setOpenMenu(false)}
         closable={false}
+        style={{ backgroundColor: "#161616" }}
+        width={"60%"}
       >
         <Menu
           items={menuItems}
           mode="inline"
-          className={cls.menu_side}
+          className={cls.menu}
+          style={{border: 'none'}}
         ></Menu>
       </Drawer>
 
@@ -61,16 +68,8 @@ function Header({ showModal }: Header) {
               title: "мы создаем уникальный видеоконтент",
               markedWord: "уникальный",
             },
-            {
-              title: "мы создаем уникальный видеоконтент",
-              markedWord: "уникальный",
-            },
-            {
-              title: "мы создаем уникальный видеоконтент",
-              markedWord: "уникальный",
-            },
-            // { title: "видеосъемка для вашего бизнеса", markedWord: "бизнеса" },
-            // { title: "видеопродакшен полного цикла", markedWord: "полного" },
+            { title: "видеосъемка для вашего бизнеса", markedWord: "бизнеса" },
+            { title: "видеопродакшен полного цикла", markedWord: "полного" },
           ]}
           className={cls.header_fader}
           markedWordClassName={cls.header_marked}
