@@ -4,7 +4,7 @@ import { ConfigProvider } from "antd";
 // import { RequestForm } from "../entities/RequestForm/RequestForm";
 // import { ReactNode, useState } from "react";
 // import { ModalStyles } from "../entities/Modal/types";
-// import SectionInfo from "../sections/Infoblock/SectionInfo";
+import SectionInfo from "../sections/Infoblock/SectionInfo";
 // import ModalWindow from "../entities/Modal/ModalWindow";
 // import Showreal from "../sections/Showreal/Showreal";
 // import YouTubeVideo from "../entities/YouTubeVideo/YouTubeVideo";
@@ -84,8 +84,8 @@ function App() {
           //   showModal(<RequestForm />, { content: { width: "80rem" } })
           // }
         ></Header>
-        {/* <SectionInfo></SectionInfo>
-        <Showreal
+        {/* <SectionInfo></SectionInfo> */}
+        {/* <Showreal
           showModal={() =>
             showModal(
               <YouTubeVideo
@@ -97,8 +97,8 @@ function App() {
               }
             )
           }
-        ></Showreal>
-        <About
+        ></Showreal> */}
+        {/* <About
           showModal={() =>
             showModal(<RequestForm />, { content: { width: "80rem" } })
           }
@@ -125,9 +125,9 @@ function App() {
           positionClassName={cls.orderForm2}
           positionGridBefore={cls.orderForm2_beforeCenter_bgc}
           positionGridAfter={cls.orderForm2_afterCenter_bgc}
-        ></OrderForm>
+        ></OrderForm> */}
 
-        <ModalWindow
+        {/* <ModalWindow
           handleCancel={handleCancel}
           handleOk={handleOk}
           isModalOpen={isModalOpen}
