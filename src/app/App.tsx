@@ -84,7 +84,7 @@ function App() {
           //   showModal(<RequestForm />, { content: { width: "80rem" } })
           // }
         ></Header>
-        {/* <SectionInfo></SectionInfo> */}
+        <SectionInfo></SectionInfo>
         {/* <Showreal
           showModal={() =>
             showModal(
