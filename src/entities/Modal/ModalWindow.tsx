@@ -1,6 +1,7 @@
 import { Modal } from "antd";
 import cls from "./ModalWindow.module.sass";
 import { ModalStyles } from "./types";
+import { StyleProvider, legacyLogicalPropertiesTransformer } from "@ant-design/cssinjs";
 
 interface ModalWindowProps {
   isModalOpen: boolean | undefined;
@@ -8,7 +9,7 @@ interface ModalWindowProps {
   handleCancel: () => void;
   children: React.ReactNode;
   // width: string;
-  styles: ModalStyles | undefined
+  styles: ModalStyles | undefined;
 }
 
 function ModalWindow({
@@ -17,28 +18,28 @@ function ModalWindow({
   isModalOpen,
   children,
   // width,
-  styles
+  styles,
 }: ModalWindowProps) {
-
   return (
-    <>
-      {/* {isModalOpen && (
+      <>
+        {/* {isModalOpen && (
         <div style={{ position: "fixed", right: 0, top: 0 }}>CLOSE BUTTON</div>
       )} */}
-      <Modal
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        className={cls.modalWindow}
-        // styles={{ body: { padding: 0, width: width },  }}
-        styles={styles}
-        // width={'100rem'}
-        footer={null}
-        // destroyOnClose
-      >
-        {children}
-      </Modal>
-    </>
+        <Modal
+          open={isModalOpen}
+          onOk={handleOk}
+          onCancel={handleCancel}
+          className={cls.modalWindow}
+          // styles={{ body: { padding: 0, width: "100%"}, content:{padding: 0, width: "100%"} }}
+          // styles={styles}
+          // width={'100vw'}
+          // height={"100%"}
+          footer={null}
+          // destroyOnClose
+        >
+          {children}
+        </Modal>
+      </>
   );
 }
 
