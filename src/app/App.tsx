@@ -8,7 +8,7 @@ import SectionInfo from "../sections/Infoblock/SectionInfo";
 // import ModalWindow from "../entities/Modal/ModalWindow";
 import Showreal from "../sections/Showreal/Showreal";
 // import YouTubeVideo from "../entities/YouTubeVideo/YouTubeVideo";
-// import About from "../sections/About/About";
+import About from "../sections/About/About";
 // import Portfolio from "../sections/Portfolio/Portfolio";
 // import { CarouselSection } from "../sections/Carousel/CarouselSection";
 // import { OrderForm } from "../sections/OrderForm/OrderForm";
@@ -57,7 +57,7 @@ function App() {
           Menu: {
             colorText: "#ffffff",
             itemHoverColor: "#ff6000",
-            colorPrimary: "#ff6000"
+            colorPrimary: "#ff6000",
           },
           Button: {
             // colorPrimary: "$third-color",
@@ -80,52 +80,52 @@ function App() {
     >
       <div className={cls.container}>
         <Header
+        // showModal={() =>
+        //   showModal(<RequestForm />, { content: { width: "80rem" } })
+        // }
+        />
+        <SectionInfo/>
+        <Showreal
+        // showModal={() =>
+        //   showModal(
+        //     <YouTubeVideo
+        //       videoUrl={"https://www.youtube.com/watch?v=4xDzrJKXOOY"}
+        //     />,
+        //     {
+        //       body: { width: "100rem" },
+        //       content: { width: "100%", transform: "translateX(-50%)" },
+        //     }
+        //   )
+        // }
+        />
+        <About
           // showModal={() =>
           //   showModal(<RequestForm />, { content: { width: "80rem" } })
           // }
-        ></Header>
-        <SectionInfo></SectionInfo>
-        <Showreal
-          // showModal={() =>
-          //   showModal(
-          //     <YouTubeVideo
-          //       videoUrl={"https://www.youtube.com/watch?v=4xDzrJKXOOY"}
-          //     />,
-          //     {
-          //       body: { width: "100rem" },
-          //       content: { width: "100%", transform: "translateX(-50%)" },
-          //     }
-          //   )
-          // }
-        ></Showreal>
-        {/* <About
-          showModal={() =>
-            showModal(<RequestForm />, { content: { width: "80rem" } })
-          }
-        ></About>
-        <Portfolio showModal={showModal}></Portfolio>
-        <CarouselSection></CarouselSection>
-        <OrderForm
+        />
+        {/* <Portfolio showModal={showModal}/> */}
+        {/* <CarouselSection/> */}
+        {/* <OrderForm
           description="Мы — видеопродакшн полного цикла. Создаем видео для YouTube и соцсетей, видео для бизнеса, проморолики, корпоративные видео. Заказать видеоролик можно прямо на сайте. Просто оставьте заявку"
           title="заказать видеоролик"
           positionClassName={cls.orderForm1}
           positionGridBefore={cls.orderForm1_beforeCenter_bgc}
           positionGridAfter={cls.orderForm1_afterCenter_bgc}
-        ></OrderForm>
-        <Services></Services>
-        <Packages></Packages>
-        <Team></Team>
-        <WorkStages></WorkStages>
-        <Reviews></Reviews>
-        <Questions></Questions>
-        <Achievements></Achievements>
-        <OrderForm
+        /> */}
+        {/* <Services/> */}
+        {/* <Packages/> */}
+        {/* <Team/> */}
+        {/* <WorkStages/> */}
+        {/* <Reviews/> */}
+        {/* <Questions/> */}
+        {/* <Achievements/> */}
+        {/* <OrderForm
           description="Мы подробно расскажем обо всех тонкостях производства видео-контента и поможем выбрать наиболее подходящий формат в соответствии с вашим бюджетом."
           title="обсудить проект"
           positionClassName={cls.orderForm2}
           positionGridBefore={cls.orderForm2_beforeCenter_bgc}
           positionGridAfter={cls.orderForm2_afterCenter_bgc}
-        ></OrderForm> */}
+        /> */}
 
         {/* <ModalWindow
           handleCancel={handleCancel}

@@ -4,7 +4,7 @@ import ArrowIcon1 from "../../assets/arrow1.svg";
 import Button from "../../entities/Button/Button";
 
 interface AboutProps {
-  showModal: () => void;
+  showModal?: () => void;
 }
 
 function About({ showModal }: AboutProps) {
