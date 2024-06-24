@@ -11,7 +11,6 @@ function SectionInfo() {
           <div>видеосъемка</div>
           <div>в москве</div>
         </div>
-        <img src={Person} className={cls.person}></img>
         <div className={cls.about_container}>
           <div className={cls.about}>
             <h3>ВИДЕОПРОДАКШН</h3>
@@ -34,6 +33,7 @@ function SectionInfo() {
             <p>вечнозеленый контент, который будет приводить новых клиентов</p>
           </div>
         </div>
+        <img src={Person} className={cls.person}></img>
       </section>
     </>
   );
