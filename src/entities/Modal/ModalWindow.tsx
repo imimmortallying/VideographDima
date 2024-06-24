@@ -1,7 +1,6 @@
 import { Modal } from "antd";
 import cls from "./ModalWindow.module.sass";
 import { ModalStyles } from "./types";
-import { StyleProvider, legacyLogicalPropertiesTransformer } from "@ant-design/cssinjs";
 
 interface ModalWindowProps {
   isModalOpen: boolean | undefined;
@@ -18,7 +17,7 @@ function ModalWindow({
   isModalOpen,
   children,
   // width,
-  styles,
+  // styles,
 }: ModalWindowProps) {
   return (
       <>
