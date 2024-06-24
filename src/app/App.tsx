@@ -1,15 +1,15 @@
 import cls from "./App.module.sass";
 import Header from "../sections/Header/Header";
 import { ConfigProvider } from "antd";
-// import { RequestForm } from "../entities/RequestForm/RequestForm";
-// import { ReactNode, useState } from "react";
-// import { ModalStyles } from "../entities/Modal/types";
+import { RequestForm } from "../entities/RequestForm/RequestForm";
+import { ReactNode, useState } from "react";
+import { ModalStyles } from "../entities/Modal/types";
 import SectionInfo from "../sections/Infoblock/SectionInfo";
-// import ModalWindow from "../entities/Modal/ModalWindow";
+import ModalWindow from "../entities/Modal/ModalWindow";
 import Showreal from "../sections/Showreal/Showreal";
-// import YouTubeVideo from "../entities/YouTubeVideo/YouTubeVideo";
+import YouTubeVideo from "../entities/YouTubeVideo/YouTubeVideo";
 import About from "../sections/About/About";
-import Portfolio from "../sections/Portfolio/Portfolio";
+// import Portfolio from "../sections/Portfolio/Portfolio";
 // import { CarouselSection } from "../sections/Carousel/CarouselSection";
 // import { OrderForm } from "../sections/OrderForm/OrderForm";
 // import { Services } from "../sections/Services/Services";
@@ -23,23 +23,23 @@ import Portfolio from "../sections/Portfolio/Portfolio";
 function App() {
   // modal window
   // вынести в хук? контекст?
-  // const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [modalContent, setModalContent] = useState<null | ReactNode>(null);
-  // const [modalStyles, setModalStyles] = useState<ModalStyles>();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState<null | ReactNode>(null);
+  const [modalStyles, setModalStyles] = useState<ModalStyles>();
 
-  // const showModal = (modalContent: ReactNode, modalStyles: ModalStyles) => {
-  //   setIsModalOpen(true);
-  //   setModalContent(modalContent);
-  //   setModalStyles(modalStyles);
-  // };
+  const showModal = (modalContent: ReactNode, modalStyles: ModalStyles) => {
+    setIsModalOpen(true);
+    setModalContent(modalContent);
+    setModalStyles(modalStyles);
+  };
 
-  // const handleOk = () => {
-  //   setIsModalOpen(false);
-  // };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
 
-  // const handleCancel = () => {
-  //   setIsModalOpen(false);
-  // };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <ConfigProvider
@@ -80,32 +80,32 @@ function App() {
     >
       <div className={cls.container}>
         <Header
-        // showModal={() =>
-        //   showModal(<RequestForm />, { content: { width: "80rem" } })
-        // }
+        showModal={() =>
+          showModal(<RequestForm />, { content: { width: "80rem" } })
+        }
         />
         <SectionInfo/>
         <Showreal
-        // showModal={() =>
-        //   showModal(
-        //     <YouTubeVideo
-        //       videoUrl={"https://www.youtube.com/watch?v=4xDzrJKXOOY"}
-        //     />,
-        //     {
-        //       body: { width: "100rem" },
-        //       content: { width: "100%", transform: "translateX(-50%)" },
-        //     }
-        //   )
-        // }
+        showModal={() =>
+          showModal(
+            <YouTubeVideo
+              videoUrl={"https://www.youtube.com/watch?v=4xDzrJKXOOY"}
+            />,
+            {
+              body: { width: "100rem" },
+              content: { width: "100%", transform: "translateX(-50%)" },
+            }
+          )
+        }
         />
         <About
-          // showModal={() =>
-          //   showModal(<RequestForm />, { content: { width: "80rem" } })
-          // }
+          showModal={() =>
+            showModal(<RequestForm />, { content: { width: "80rem" } })
+          }
         />
-        <Portfolio 
-        // showModal={showModal}
-        />
+        {/* <Portfolio 
+        showModal={showModal}
+        /> */}
         {/* <CarouselSection/> */}
         {/* <OrderForm
           description="Мы — видеопродакшн полного цикла. Создаем видео для YouTube и соцсетей, видео для бизнеса, проморолики, корпоративные видео. Заказать видеоролик можно прямо на сайте. Просто оставьте заявку"
@@ -129,13 +129,13 @@ function App() {
           positionGridAfter={cls.orderForm2_afterCenter_bgc}
         /> */}
 
-        {/* <ModalWindow
+        <ModalWindow
           handleCancel={handleCancel}
           handleOk={handleOk}
           isModalOpen={isModalOpen}
           children={modalContent}
           styles={modalStyles}
-        ></ModalWindow> */}
+        ></ModalWindow>
       </div>
     </ConfigProvider>
   );

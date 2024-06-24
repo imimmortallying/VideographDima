@@ -9,7 +9,7 @@ import Bg5 from "../../assets/background/bg5.jpg";
 import Bg6 from "../../assets/background/bg6.jpg";
 import Bg7 from "../../assets/background/bg7.jpg";
 import Bg8 from "../../assets/background/bg8.jpg";
-import YouTubeVideo from "../../entities/YouTubeVideo/YouTubeVideo";
+// import YouTubeVideo from "../../entities/YouTubeVideo/YouTubeVideo";
 import { ReactNode } from "react";
 import { ModalStyles } from "../../entities/Modal/types";
 
@@ -29,7 +29,8 @@ const videosData = [
   { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg1 },
 ];
 
-function Portfolio({ showModal }: PortfolioProps) {
+// function Portfolio({ showModal }: PortfolioProps) {
+function Portfolio({}: PortfolioProps) {
   return (
     <>
       <div className={cls.portfolio_beforeCenter_bgc}></div>

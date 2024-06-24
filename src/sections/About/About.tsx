@@ -1,6 +1,5 @@
 import cls from "./About.module.sass";
 import BgcVideo from "../../assets/backstage1.mp4";
-import ArrowIcon1 from "../../assets/arrow1.svg";
 import Button from "../../entities/Button/Button";
 
 interface AboutProps {
