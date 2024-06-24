@@ -14,7 +14,7 @@ import { ReactNode } from "react";
 import { ModalStyles } from "../../entities/Modal/types";
 
 interface PortfolioProps {
-  showModal: (modalContent: ReactNode, modalStyles: ModalStyles) => void;
+  showModal?: (modalContent: ReactNode, modalStyles: ModalStyles) => void;
 }
 
 const videosData = [
@@ -40,12 +40,12 @@ function Portfolio({ showModal }: PortfolioProps) {
           <VideoPreview
             key={i}
             imageSrc={node.imgSrc}
-            showModal={() =>
-              showModal(<YouTubeVideo videoUrl={node.videoUrl} />, {
-                body: { width: "100rem" },
-                content: { width: "100%", transform: "translateX(-50%)" },
-              })
-            }
+            // showModal={() =>
+            //   showModal(<YouTubeVideo videoUrl={node.videoUrl} />, {
+            //     body: { width: "100rem" },
+            //     content: { width: "100%", transform: "translateX(-50%)" },
+            //   })
+            // }
           ></VideoPreview>
         ))}
       </section>

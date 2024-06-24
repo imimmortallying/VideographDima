@@ -23,11 +23,12 @@ function About({ showModal }: AboutProps) {
             конверсию, расширит клиентскую базу, повысит узнаваемость бренда,
             расскажет о новой услуге или акции
           </div>
-          <div className={cls.glitch}></div>
+          {/* <div className={cls.glitch}></div> */}
         </div>
         <div className={cls.about_footer}>
           <div className={cls.about_title_second}>снимай с нами</div>
-          <img src={ArrowIcon1} className={cls.about_arrowIcon}></img>
+          {/* <img src={ArrowIcon1} className={cls.about_arrowIcon}></img> */}
+          <div className={cls.about_arrowIcon}></div>
           <Button
             buttonColor="thirdColor"
             buttonStyle="rectangleAglow"
