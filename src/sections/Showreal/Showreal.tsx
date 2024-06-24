@@ -3,7 +3,7 @@ import BgcImage from "../../assets/showreal.jpg";
 import PlayButton from "../../assets/playbutton.png";
 
 interface ShowrealProps {
-  showModal: () => void;
+  showModal?: () => void;
 }
 
 function Showreal({ showModal }: ShowrealProps) {

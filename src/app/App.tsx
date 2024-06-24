@@ -6,7 +6,7 @@ import { ConfigProvider } from "antd";
 // import { ModalStyles } from "../entities/Modal/types";
 import SectionInfo from "../sections/Infoblock/SectionInfo";
 // import ModalWindow from "../entities/Modal/ModalWindow";
-// import Showreal from "../sections/Showreal/Showreal";
+import Showreal from "../sections/Showreal/Showreal";
 // import YouTubeVideo from "../entities/YouTubeVideo/YouTubeVideo";
 // import About from "../sections/About/About";
 // import Portfolio from "../sections/Portfolio/Portfolio";
@@ -85,19 +85,19 @@ function App() {
           // }
         ></Header>
         <SectionInfo></SectionInfo>
-        {/* <Showreal
-          showModal={() =>
-            showModal(
-              <YouTubeVideo
-                videoUrl={"https://www.youtube.com/watch?v=4xDzrJKXOOY"}
-              />,
-              {
-                body: { width: "100rem" },
-                content: { width: "100%", transform: "translateX(-50%)" },
-              }
-            )
-          }
-        ></Showreal> */}
+        <Showreal
+          // showModal={() =>
+          //   showModal(
+          //     <YouTubeVideo
+          //       videoUrl={"https://www.youtube.com/watch?v=4xDzrJKXOOY"}
+          //     />,
+          //     {
+          //       body: { width: "100rem" },
+          //       content: { width: "100%", transform: "translateX(-50%)" },
+          //     }
+          //   )
+          // }
+        ></Showreal>
         {/* <About
           showModal={() =>
             showModal(<RequestForm />, { content: { width: "80rem" } })
