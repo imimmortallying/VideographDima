@@ -11,8 +11,8 @@ import Bg3 from "../../assets/background/bg3.jpg";
 import Bg4 from "../../assets/background/bg4.jpg";
 import Bg5 from "../../assets/background/bg5.jpg";
 import Bg6 from "../../assets/background/bg6.jpg";
-import Bg7 from "../../assets/background/bg7.jpg";
-import Bg8 from "../../assets/background/bg8.jpg";
+// import Bg7 from "../../assets/background/bg7.jpg";
+// import Bg8 from "../../assets/background/bg8.jpg";
 
 interface CarouselSectionProps {
   className?: string;
