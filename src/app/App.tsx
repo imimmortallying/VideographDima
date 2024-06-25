@@ -12,7 +12,7 @@ import About from "../sections/About/About";
 import Portfolio from "../sections/Portfolio/Portfolio";
 import { CarouselSection } from "../sections/Carousel/CarouselSection";
 import { OrderForm } from "../sections/OrderForm/OrderForm";
-// import { Services } from "../sections/Services/Services";
+import { Services } from "../sections/Services/Services";
 // import { Packages } from "../sections/Packages/Packages";
 // import { Team } from "../sections/Team/Team";
 // import { WorkStages } from "../sections/WorkStages/WorkStages";
@@ -113,7 +113,7 @@ function App() {
           positionGridBefore={cls.orderForm1_beforeCenter_bgc}
           positionGridAfter={cls.orderForm1_afterCenter_bgc}
         />
-        {/* <Services/> */}
+        <Services/>
         {/* <Packages/> */}
         {/* <Team/> */}
         {/* <WorkStages/> */}
