@@ -32,7 +32,6 @@ function ModalWindow({
           className={cls.modalWindow}
           styles={styles}
           width={width}
-          // width={'100rem'}
           footer={null}
           // destroyOnClose
         >
