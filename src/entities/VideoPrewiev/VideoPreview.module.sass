@@ -21,6 +21,10 @@
         opacity: 0
         transform: translate(-50%, -50%) translateY(3rem)
         transition: opacity .3s, transform .3s
+        @include respond(tab-port)
+            opacity: 1
+            transform: translate(-50%, -50%)
+            transition: none
     &_image
         backface-visibility: hidden
         object-fit: cover
