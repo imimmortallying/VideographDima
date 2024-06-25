@@ -10,7 +10,7 @@ import Showreal from "../sections/Showreal/Showreal";
 import YouTubeVideo from "../entities/YouTubeVideo/YouTubeVideo";
 import About from "../sections/About/About";
 import Portfolio from "../sections/Portfolio/Portfolio";
-import { CarouselSection } from "../sections/Carousel/CarouselSection";
+// import { CarouselSection } from "../sections/Carousel/CarouselSection";
 import { OrderForm } from "../sections/OrderForm/OrderForm";
 // import { Services } from "../sections/Services/Services";
 // import { Packages } from "../sections/Packages/Packages";
@@ -105,14 +105,14 @@ function App() {
           }
         />
         <Portfolio showModal={showModal} />
-        <CarouselSection/>
-        {/* <OrderForm
+        {/* <CarouselSection/> */}
+        <OrderForm
           description="Мы — видеопродакшн полного цикла. Создаем видео для YouTube и соцсетей, видео для бизнеса, проморолики, корпоративные видео. Заказать видеоролик можно прямо на сайте. Просто оставьте заявку"
           title="заказать видеоролик"
           positionClassName={cls.orderForm1}
           positionGridBefore={cls.orderForm1_beforeCenter_bgc}
           positionGridAfter={cls.orderForm1_afterCenter_bgc}
-        /> */}
+        />
         {/* <Services/> */}
         {/* <Packages/> */}
         {/* <Team/> */}
