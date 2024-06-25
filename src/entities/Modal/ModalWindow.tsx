@@ -7,7 +7,7 @@ interface ModalWindowProps {
   handleOk: () => void;
   handleCancel: () => void;
   children: React.ReactNode;
-  // width: string;
+  width?: string;
   styles: ModalStyles | undefined;
 }
 
@@ -16,9 +16,10 @@ function ModalWindow({
   handleOk,
   isModalOpen,
   children,
-  // width,
-  // styles,
+  width,
+  styles,
 }: ModalWindowProps) {
+  console.log('width', styles)
   return (
       <>
         {/* {isModalOpen && (
@@ -29,10 +30,9 @@ function ModalWindow({
           onOk={handleOk}
           onCancel={handleCancel}
           className={cls.modalWindow}
-          // styles={{ body: { padding: 0, width: "100%"}, content:{padding: 0, width: "100%"} }}
-          // styles={styles}
-          // width={'100vw'}
-          // height={"100%"}
+          styles={styles}
+          width={width}
+          // width={'100rem'}
           footer={null}
           // destroyOnClose
         >
