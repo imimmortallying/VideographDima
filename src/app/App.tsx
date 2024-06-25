@@ -17,7 +17,7 @@ import { Packages } from "../sections/Packages/Packages";
 import { Team } from "../sections/Team/Team";
 import { WorkStages } from "../sections/WorkStages/WorkStages";
 import { Reviews } from "../sections/Reviews/Reviews";
-// import { Questions } from "../sections/Questions/Questions";
+import { Questions } from "../sections/Questions/Questions";
 // import { Achievements } from "../sections/Achievements/Achievements";
 
 function App() {
@@ -118,7 +118,7 @@ function App() {
         <Team/>
         <WorkStages/>
         <Reviews/>
-        {/* <Questions/> */}
+        <Questions/>
         {/* <Achievements/> */}
         {/* <OrderForm
           description="Мы подробно расскажем обо всех тонкостях производства видео-контента и поможем выбрать наиболее подходящий формат в соответствии с вашим бюджетом."
