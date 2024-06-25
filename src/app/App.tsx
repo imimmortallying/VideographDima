@@ -15,8 +15,8 @@ import { OrderForm } from "../sections/OrderForm/OrderForm";
 import { Services } from "../sections/Services/Services";
 import { Packages } from "../sections/Packages/Packages";
 import { Team } from "../sections/Team/Team";
-// import { WorkStages } from "../sections/WorkStages/WorkStages";
-// import { Reviews } from "../sections/Reviews/Reviews";
+import { WorkStages } from "../sections/WorkStages/WorkStages";
+import { Reviews } from "../sections/Reviews/Reviews";
 // import { Questions } from "../sections/Questions/Questions";
 // import { Achievements } from "../sections/Achievements/Achievements";
 
@@ -116,8 +116,8 @@ function App() {
         <Services/>
         <Packages/>
         <Team/>
-        {/* <WorkStages/> */}
-        {/* <Reviews/> */}
+        <WorkStages/>
+        <Reviews/>
         {/* <Questions/> */}
         {/* <Achievements/> */}
         {/* <OrderForm
