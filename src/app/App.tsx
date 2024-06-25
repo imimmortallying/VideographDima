@@ -14,7 +14,7 @@ import { CarouselSection } from "../sections/Carousel/CarouselSection";
 import { OrderForm } from "../sections/OrderForm/OrderForm";
 import { Services } from "../sections/Services/Services";
 import { Packages } from "../sections/Packages/Packages";
-// import { Team } from "../sections/Team/Team";
+import { Team } from "../sections/Team/Team";
 // import { WorkStages } from "../sections/WorkStages/WorkStages";
 // import { Reviews } from "../sections/Reviews/Reviews";
 // import { Questions } from "../sections/Questions/Questions";
@@ -115,7 +115,7 @@ function App() {
         />
         <Services/>
         <Packages/>
-        {/* <Team/> */}
+        <Team/>
         {/* <WorkStages/> */}
         {/* <Reviews/> */}
         {/* <Questions/> */}
