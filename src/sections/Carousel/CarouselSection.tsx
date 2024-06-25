@@ -20,8 +20,10 @@ interface CarouselSectionProps {
 
 // настройки центрального элемента и др. смотри в Carousel.sass
 var settings = {
+  autoplay: true,
+  autoplaySpeed: 5000,
   dots: true,
-  infinite: false,
+  infinite: true,
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -33,7 +35,7 @@ var settings = {
       breakpoint: 1024,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         infinite: true,
         dots: true
       }
@@ -42,7 +44,7 @@ var settings = {
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         initialSlide: 2
       }
     },
@@ -63,9 +65,9 @@ const videosData = [
   { videoUrl: "https://www.youtube.com/watch?v=jJoPeafUQTc", imgSrc: Bg4 },
   { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg5 },
   { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg6 },
-  { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg7 },
-  { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg8 },
-  { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg1 },
+  // { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg7 },
+  // { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg8 },
+  // { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg1 },
 ];
 
 export const CarouselSection = ({}: CarouselSectionProps) => {
