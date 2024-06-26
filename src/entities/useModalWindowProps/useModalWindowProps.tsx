@@ -1,13 +1,7 @@
 import { ReactNode, useState } from "react";
 import { ModalStyles } from "../Modal/types";
 
-type ShowModal = {
-  modalContent: ReactNode;
-  modalStyles?: ModalStyles;
-  modalWidth?: string;
-};
 export function useModalWindowProps() {
-  // modal window
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState<null | ReactNode>(null);
   const [modalStyles, setModalStyles] = useState<ModalStyles>(); // чтобы убрать padding
