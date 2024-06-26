@@ -8,7 +8,7 @@ import { TgIcon } from "../../entities/Icons/TgIcon/TgIcon";
 import bgVideo from "../../assets/Header/bgvideo.mp4";
 
 interface Header {
-  showModal?: () => void;
+  showModal: () => void;
 }
 const menuItems = [
   { label: "Главная", key: "Главная" },
@@ -91,7 +91,7 @@ function Header({ showModal }: Header) {
             в красноярске, красноярском крае и по россии в целом
           </h2>
           <Button
-            onClick={showModal}
+            onClick={()=>showModal()}
             buttonStyle="rectangle"
             buttonColor="mainColor"
             textContent="оставить заявку"

@@ -20,6 +20,7 @@ function ModalWindow({
   styles,
 }: ModalWindowProps) {
   console.log('width', styles)
+  console.log('isModalOpen', isModalOpen)
   return (
       <>
         {/* {isModalOpen && (

@@ -1,8 +1,6 @@
 import cls from "./App.module.sass";
 import Header from "../sections/Header/Header";
 import { RequestForm } from "../entities/RequestForm/RequestForm";
-import { ReactNode, useState } from "react";
-import { ModalStyles } from "../entities/Modal/types";
 import SectionInfo from "../sections/Infoblock/SectionInfo";
 import ModalWindow from "../entities/Modal/ModalWindow";
 import Showreal from "../sections/Showreal/Showreal";
@@ -19,36 +17,16 @@ import { Reviews } from "../sections/Reviews/Reviews";
 import { Questions } from "../sections/Questions/Questions";
 import { Achievements } from "../sections/Achievements/Achievements";
 import { AntdConfigProvider } from "./AntdConfigProvider/AntdConfigProvider";
+import { useModalWindowProps } from "../entities/useModalWindowProps/useModalWindowProps";
 
 function App() {
-  // modal window
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState<null | ReactNode>(null);
-  const [modalStyles, setModalStyles] = useState<ModalStyles>(); // чтобы убрать padding
-  const [modalWidth, setModalWidth] = useState<string>(); // чтобы передать разную ширину в пропс. через styles передается некорректно
-
-  const showModal = (
-    modalContent: ReactNode,
-    modalStyles?: ModalStyles,
-    modalWidth?: string
-  ) => {
-    setIsModalOpen(true);
-    setModalContent(modalContent);
-    setModalStyles(modalStyles);
-    setModalWidth(modalWidth);
-  };
-
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
+  const { modalProps, showModal } = useModalWindowProps();
+  const {handleCancel, handleOk, isModalOpen, modalContent, modalStyles, modalWidth} = modalProps
 
   return (
     <AntdConfigProvider>
       <div className={cls.container}>
+        <button onClick={() => useModalWindowProps().modalProps}>123</button>
         <Header showModal={() => showModal(<RequestForm />)} />
         <SectionInfo />
         <Showreal
@@ -88,7 +66,6 @@ function App() {
           positionGridBefore={cls.orderForm2_beforeCenter_bgc}
           positionGridAfter={cls.orderForm2_afterCenter_bgc}
         />
-
         <ModalWindow
           handleCancel={handleCancel}
           handleOk={handleOk}
