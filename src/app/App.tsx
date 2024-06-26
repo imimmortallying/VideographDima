@@ -19,6 +19,7 @@ import { WorkStages } from "../sections/WorkStages/WorkStages";
 import { Reviews } from "../sections/Reviews/Reviews";
 import { Questions } from "../sections/Questions/Questions";
 import { Achievements } from "../sections/Achievements/Achievements";
+import { AntdConfigProvider } from "./AntdConfigProvider/AntdConfigProvider";
 
 function App() {
   // modal window
@@ -47,42 +48,7 @@ function App() {
   };
 
   return (
-    <ConfigProvider
-      theme={{
-        token: {
-          colorPrimary: "#000000",
-          fontFamily: '"Oswald", Arial, sans-serif',
-          // fontSize: 20,
-        },
-        components: {
-          Modal: {
-            colorIcon: "#FFFFFF",
-            wireframe: true,
-          },
-          Menu: {
-            colorText: "#ffffff",
-            itemHoverColor: "#ff6000",
-            colorPrimary: "#ff6000",
-          },
-          Button: {
-            // colorPrimary: "$third-color",
-            fontFamily: '"Oswald", Arial, sans-serif',
-            fontSize: 20,
-            // algorithm: true,
-            defaultBg: "#ff6000",
-            defaultBorderColor: "#ff6000",
-            defaultHoverBorderColor: "#ff6000",
-            defaultHoverBg: "#ff6000",
-            defaultColor: "#ffffff",
-            defaultHoverColor: "#ffffff",
-          },
-          Collapse: {
-            // colorText: ""
-            colorTextHeading: "#ffffff",
-          },
-        },
-      }}
-    >
+    <AntdConfigProvider>
       <div className={cls.container}>
         <Header showModal={() => showModal(<RequestForm />)} />
         <SectionInfo />
@@ -95,17 +61,13 @@ function App() {
               {
                 body: { padding: 0 },
               },
-              '80rem'
+              "80rem"
             )
           }
         />
-        <About
-          showModal={() =>
-            showModal(<RequestForm />)
-          }
-        />
+        <About showModal={() => showModal(<RequestForm />)} />
         <Portfolio showModal={showModal} />
-        <CarouselSection/>
+        <CarouselSection />
         <OrderForm
           description="Мы — видеопродакшн полного цикла. Создаем видео для YouTube и соцсетей, видео для бизнеса, проморолики, корпоративные видео. Заказать видеоролик можно прямо на сайте. Просто оставьте заявку"
           title="заказать видеоролик"
@@ -113,13 +75,13 @@ function App() {
           positionGridBefore={cls.orderForm1_beforeCenter_bgc}
           positionGridAfter={cls.orderForm1_afterCenter_bgc}
         />
-        <Services/>
-        <Packages/>
-        <Team/>
-        <WorkStages/>
-        <Reviews/>
-        <Questions/>
-        <Achievements/>
+        <Services />
+        <Packages />
+        <Team />
+        <WorkStages />
+        <Reviews />
+        <Questions />
+        <Achievements />
         <OrderForm
           description="Мы подробно расскажем обо всех тонкостях производства видео-контента и поможем выбрать наиболее подходящий формат в соответствии с вашим бюджетом."
           title="обсудить проект"
@@ -137,7 +99,7 @@ function App() {
           width={modalWidth}
         ></ModalWindow>
       </div>
-    </ConfigProvider>
+    </AntdConfigProvider>
   );
 }
 
