@@ -21,12 +21,18 @@ import { useModalWindowProps } from "../entities/useModalWindowProps/useModalWin
 
 function App() {
   const { modalProps, showModal } = useModalWindowProps();
-  const {handleCancel, handleOk, isModalOpen, modalContent, modalStyles, modalWidth} = modalProps
+  const {
+    handleCancel,
+    handleOk,
+    isModalOpen,
+    modalContent,
+    modalStyles,
+    modalWidth,
+  } = modalProps;
 
   return (
     <AntdConfigProvider>
       <div className={cls.container}>
-        <button onClick={() => useModalWindowProps().modalProps}>123</button>
         <Header showModal={() => showModal(<RequestForm />)} />
         <SectionInfo />
         <Showreal

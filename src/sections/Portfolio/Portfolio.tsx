@@ -38,7 +38,7 @@ function Portfolio({ showModal }: PortfolioProps) {
     <>
       <div className={cls.portfolio_beforeCenter_bgc}></div>
       <div className={cls.portfolio_afterCenter_bgc}></div>
-      <div className={cls.portfolio_header}>портфолио</div>
+      <div className={cls.portfolio_header} id="portfolio">портфолио</div>
       <section className={cls.portfolio}>
         {videosData.map((node, i) => (
           <VideoPreview

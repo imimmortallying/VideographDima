@@ -23,7 +23,6 @@ function ModalWindow({
   return (
     <>
       {isModalOpen && (
-        // <div style={{ position: "fixed", right: 0, top: 0, color: 'red', fontSize: '5rem', zIndex: 1}}>CLOSE BUTTON</div>
         <CloseOutlined style={{ position: "fixed", right: '5rem', top: '5rem', color: 'white', fontSize: '5rem', zIndex: 1}}/>
       )}
       <Modal

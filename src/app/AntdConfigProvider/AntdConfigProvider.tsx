@@ -9,7 +9,7 @@ export const AntdConfigProvider = ({ children }: IAntdConfigPrvider) => {
         token: {
           colorPrimary: "#000000",
           fontFamily: '"Oswald", Arial, sans-serif',
-          // fontSize: 20,
+          fontSize: 20,
         },
         components: {
           Modal: {
@@ -19,6 +19,10 @@ export const AntdConfigProvider = ({ children }: IAntdConfigPrvider) => {
           Menu: {
             colorText: "#ffffff",
             itemHoverColor: "#ff6000",
+            colorPrimary: "#ff6000",
+          },
+          Anchor: {
+            colorText: "#ffffff",
             colorPrimary: "#ff6000",
           },
           Button: {
