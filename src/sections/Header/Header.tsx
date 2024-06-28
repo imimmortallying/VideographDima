@@ -1,70 +1,29 @@
 import cls from "./Header.module.sass";
 import Fader from "../../entities/Fader/Fader";
 import Button from "../../entities/Button/Button";
-import { Anchor, Drawer } from "antd";
-import { useState } from "react";
-import { MenuOutlined } from "@ant-design/icons";
 import { TgIcon } from "../../entities/Icons/TgIcon/TgIcon";
 import bgVideo from "../../assets/Header/bgvideo.mp4";
+import { HeaderAnchor } from "./components/Anchor/HeaderAnchor";
 
 interface Header {
   showModal: () => void;
 }
 
-const menuItemsAnchor = [
-  { title: "Главная", key: "Главная", href: "#header"  },
+const anchorItems = [
+  { title: "Главная", key: "Главная", href: "#header" },
   { title: "О студии", key: "О студии", href: "#about" },
   { title: "услуги", key: "услуги", href: "#services" },
   { title: "портфолио", key: "портфолио", href: "#portfolio" },
 ];
+
 function Header({ showModal }: Header) {
-  const [openMenu, setOpenMenu] = useState(false);
   return (
     <header className={cls.header} id="header">
       <video className={cls.header_bgVideo} muted loop autoPlay>
         <source src={bgVideo}></source>
       </video>
-      <div className={cls.menu_icon}>
-        <MenuOutlined
-          onClick={() => setOpenMenu(true)}
-          style={{
-            color: "white",
-            fontSize: "4rem",
-            // position: "fixed",
-            top: "3rem",
-            left: "3rem",
-          }}
-        />
-      </div>
-
-      {/* <span className={cls.menu_top}>
-        <Anchor
-          items={menuItemsAnchor}
-          direction="horizontal"
-          affix={false}
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            paddingRight: "3rem",
-          }}
-        ></Anchor>
-      </span> */}
-
-      <Drawer
-        open={openMenu}
-        onClose={() => setOpenMenu(false)}
-        closable={false}
-        style={{ backgroundColor: "#161616" }}
-        width={"60%"}
-      >
-        {/* <Menu
-          items={menuItems}
-          mode="inline"
-          className={cls.menu}
-          style={{border: 'none'}}
-        ></Menu> */}
-        <Anchor items={menuItemsAnchor}></Anchor>
-      </Drawer>
+      
+      <HeaderAnchor items={anchorItems}></HeaderAnchor>
 
       <div className={cls.header_box}>
         <h2 className={cls.title_second}>
@@ -85,8 +44,6 @@ function Header({ showModal }: Header) {
               title: "мы создаем уникальный видеоконтент",
               markedWord: "уникальный",
             },
-            // { title: "видеосъемка для вашего бизнеса", markedWord: "бизнеса" },
-            // { title: "видеосъемка полного цикла", markedWord: "полного" },
           ]}
           className={cls.header_fader}
           markedWordClassName={cls.header_marked}

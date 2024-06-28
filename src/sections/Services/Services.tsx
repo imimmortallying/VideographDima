@@ -49,7 +49,7 @@ export const Services = ({}: ServicesProps) => {
     <>
       <div className={cls.services_beforeCenter_bgc}></div>
       <div className={cls.services_afterCenter_bgc}></div>
-      <div className={cls.services}>
+      <div className={cls.services} id="services">
         <div className={cls.services_title}>услуги</div>
         <div className={cls.services_body}>
           {cardsData.map((card, i) => (
