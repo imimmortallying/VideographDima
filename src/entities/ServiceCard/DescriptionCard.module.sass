@@ -4,13 +4,18 @@
     height: 60rem
     perspective: 150rem
 
-    &:hover &__front
-        transform: rotateY(-180deg)
-        // @include respond(tab-port)
-        // @media only screen and (max-width: 900px), (hover:none)
-        //     transform: rotateY(0deg)
-    &:hover &__back
-        transform: rotateY(0deg)
+    @media only screen and (min-width: 900px) and (hover:hover)
+        &:hover &__front
+            transform: rotateY(-180deg)
+            pointer-events: none
+
+
+    @media only screen and (min-width: 900px) and (hover:hover)
+        &:hover &__back
+            transform: rotateY(0deg)
+            pointer-events: none        
+
+
 
 
     &_title

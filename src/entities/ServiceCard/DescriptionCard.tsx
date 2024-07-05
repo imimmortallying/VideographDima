@@ -1,3 +1,4 @@
+import { useState } from "react";
 import cls from "./DescriptionCard.module.sass";
 import { BackSide } from "./components/BackSide/BackSide";
 import { FrontSide } from "./components/FrontSide/FrontSide";
@@ -28,6 +29,7 @@ export const DescriptionCard = ({
   advantages,
   advantagesClassName,
 }: DescriptionCardProps) => {
+  const [isActive, setIsActive] = useState(false)
   return (
     <div className={`${cls.card} ${containerClassName}`}>
       <FrontSide
@@ -39,12 +41,18 @@ export const DescriptionCard = ({
         nameClassName={nameClassName}
         titleClassName={titleClassName}
         className={cls.card__front}
+
+        isActive={isActive}
+        setIsActive={setIsActive}
       />
       <BackSide
         advantages={advantages}
         advantagesClassName={advantagesClassName}
         titleClassName={titleClassName}
         className={cls.card__back}
+
+        isActive={isActive}
+        setIsActive={setIsActive}
       />
     </div>
   );

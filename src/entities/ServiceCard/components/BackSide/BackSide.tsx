@@ -6,11 +6,13 @@ interface BackSideProps {
     advantages?: string[];
     advantagesClassName?: string
     titleClassName: string;
+    isActive: boolean;
+    setIsActive: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const BackSide = ({className, advantages, advantagesClassName, titleClassName}:BackSideProps) => {
+export const BackSide = ({className, advantages, advantagesClassName, titleClassName,isActive,setIsActive}:BackSideProps) => {
     return (
-        <div className={`${cls.card__side} ${cls.card__side_back} ${className}`}>
+        <div onClick={()=>setIsActive(prev=>!prev)} className={`${cls.card__side} ${cls.card__side_back} ${className} ${isActive ? cls.active : ''}`}>
         <div className={`${cls.card_title} ${titleClassName}`}>
           преимущества
         </div>
