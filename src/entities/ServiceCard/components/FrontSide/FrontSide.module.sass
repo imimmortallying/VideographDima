@@ -1,0 +1,28 @@
+
+.card
+
+    &_description
+        // background-color: rgba(0,0,0,0.7)
+        // border-radius: 1rem
+        // padding: 2rem
+    &__side
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        transition: all .8s ease-out
+        backface-visibility: hidden // чтобы карточки не просвечивали
+        overflow: hidden
+        padding: 3rem
+        border-radius: 1rem
+        &_front
+            display: flex
+            flex-direction: column
+            background-color: $bgc-color3
+            gap: 3rem
+            background-size: cover
+            color: white
+
+    // &:hover
+    //     transform: rotateY(-180deg)

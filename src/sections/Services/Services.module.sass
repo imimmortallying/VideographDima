@@ -18,33 +18,43 @@
         color:$primary-color
     &_body
         display: grid
-        grid-template-rows: repeat(2, min-content)
-        grid-template-columns: repeat(auto-fill, minmax(36rem, 1fr))
+        grid-template-columns: repeat(2, 1fr)
         gap: 5rem
+        @media only screen and (max-width: 900px) and (hover:none)
+            grid-template-columns: 1fr
 
     // children card
     &_cardContainer
-        display: flex
-        flex-direction: column
-        background-color: $bgc-color3
-        padding: 3rem
-        gap: 3rem
-        border-radius: 1rem
+        // display: flex
+        // flex-direction: column
+        // background-color: $bgc-color3
+        // padding: 3rem
+        // gap: 3rem
+        // border-radius: 1rem
 
     &_cardTitle
+        color: $secondary-color
         font-size: 4.5rem
         font-weight: 700
         text-transform: uppercase
         line-height: 5rem
-        min-height: 10rem
+        // min-height: 8rem
         text-align: center
         align-content: center
 
     &_cardDescription
-        font-size: 1.8rem
+        font-size: 2.8rem
+        color: $secondary-color
 
     &_cardPrice
         font-size: 1.8rem
         color: $third-color
         margin-top: auto
-        
+
+    &_advantages
+        display: flex
+        flex-direction: column
+        height: stretch
+        font-size: 2.2rem
+        // align-items: center
+        justify-content: space-evenly

@@ -18,10 +18,7 @@
         margin: 0 auto
         position: relative
     &_description
-        text-align: left
-        font-size: 2.2rem
-        color:$primary-color
-        width: 60%
+        @include text_description
     &_video
         object-fit: cover
         width: 100%
@@ -36,6 +33,7 @@
         position: relative
 
     &_title_second
+        margin-top: 2rem
         font-size: 4rem
         text-transform: uppercase
         font-weight: 600
@@ -52,9 +50,9 @@
         @include respond(tab-port)
             background-image: url("../../assets/About/arrow2.svg")
             // background-size: contain no-repeat
-            height: 10rem
+            height: 15rem
             left: 50%
-            top: 50%
+            top: 65%
             transform: translate(-50%, -50%)
     &_button
         // width: 100%
@@ -64,57 +62,9 @@
         height: 6rem
         // padding: 2rem 12rem
         @include respond(tab-port)
-            margin-top: 16rem
+            margin-top: 10rem
         @include respond(phone)
             height: 8rem 
             width: 100%
-
-
-
-.glitch
-    width: 40vw
-    height: 25vw
-    object-fit: cover
-    background: url('../../assets/glitch/author.jpg')
-    background-size: cover
-    animation: glitch 1.8s infinite steps(1)
-    position: absolute
-    bottom: 3.5rem
-    right: -5rem
-
-@keyframes glitch
-    0%, 100%
-        background: url('../../assets/glitch/author.jpg')
-        background-size: cover
-    10%
-        background: url('../../assets/glitch/glitch1.jpg')
-        background-size: cover
-    20%
-        background: url('../../assets/glitch/glitch2.jpg')
-        background-size: cover
-    30%
-        background: url('../../assets/glitch/glitch3.jpg')
-        background-size: cover
-    40%
-        background: url('../../assets/glitch/glitch4.jpg')
-        background-size: cover
-    50%
-        background: url('../../assets/glitch/glitch5.jpg')
-        background-size: cover
-    60%
-        background: url('../../assets/glitch/trip.jpg')
-        background-size: cover
-    70%
-        background: url('../../assets/glitch/red1.jpg')
-        background-size: cover
-        transform: rotateZ(3deg)
-    80%
-        background: url('../../assets/glitch/red2.jpg')
-        background-size: cover
-        transform: rotateZ(5deg)
-    90%
-        background: url('../../assets/glitch/red3.jpg')
-        background-size: cover
-        transform: rotateZ(-4deg)
         
         

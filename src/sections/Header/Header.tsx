@@ -22,39 +22,35 @@ function Header({ showModal }: Header) {
       <video className={cls.header_bgVideo} muted loop autoPlay>
         <source src={bgVideo}></source>
       </video>
-      
+
       <HeaderAnchor items={anchorItems}></HeaderAnchor>
 
       <div className={cls.header_box}>
         <h2 className={cls.title_second}>
-          креативная команда - профессиональные видеографы - видеосъемка по
-          россии и миру
+          Профессиональная команда по производству видеоконтента – работаем по
+          всей России, базируемся в Красноярске
         </h2>
         <Fader
           arrayOfTitles={[
             {
-              title: "мы создаем уникальный видеоконтент",
-              markedWord: "уникальный",
+              title: "индивидуальный подход",
+              markedWord: "индивидуальный",
             },
             {
-              title: "мы создаем уникальный видеоконтент",
-              markedWord: "уникальный",
-            },
-            {
-              title: "мы создаем уникальный видеоконтент",
-              markedWord: "уникальный",
+              title: "качественный результат",
+              markedWord: "качественный",
             },
           ]}
           className={cls.header_fader}
           markedWordClassName={cls.header_marked}
         ></Fader>
         <div className={cls.header_description}>
-          <h2 className={cls.title_second}>снимаем видеоролики под ключ:</h2>
+          <h2 className={cls.title_second}>Снимаем, продюссируем, пишем сценарии:</h2>
           <h2 className={cls.title_second}>
-            рекламные ролики, концерты, мероприятия
+          Имиджевые видео, корпоративные, информационные и рекламные ролики
           </h2>
           <h2 className={cls.title_second}>
-            в красноярске, красноярском крае и по россии в целом
+          подкасты, интервью, клипы, съёмка любых мероприятий
           </h2>
           <Button
             onClick={() => showModal()}
@@ -66,7 +62,7 @@ function Header({ showModal }: Header) {
           <Button
             buttonStyle="rectangle"
             buttonColor="additionalColor"
-            textContent="задать вопрос в telegram"
+            textContent="задать нам вопрос"
             className={cls.header_button_tg}
             icon={<TgIcon />}
           ></Button>

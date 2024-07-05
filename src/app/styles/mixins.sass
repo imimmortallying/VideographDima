@@ -19,3 +19,15 @@
     @if $breakpoint == big-screen
         @media only screen and (min-width: 1800px)
             @content
+
+// text
+@mixin text_title
+    font-size: 2rem
+    text-transform: uppercase
+    color: $primary-color
+    font-weight: normal
+
+@mixin text_description
+    text-align: left
+    font-size: 2.2rem
+    color:$primary-color

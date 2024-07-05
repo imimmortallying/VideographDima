@@ -1,15 +1,19 @@
 import cls from "./DescriptionCard.module.sass";
+import { BackSide } from "./components/BackSide/BackSide";
+import { FrontSide } from "./components/FrontSide/FrontSide";
 
 interface DescriptionCardProps {
   containerClassName?: string;
   title: string;
-  titleClassName?: string;
+  titleClassName: string;
   name?: string;
   nameClassName?: string;
   description: string;
   descriptionClassName?: string;
   price?: string;
   priceClassName?: string;
+  advantages?: string[];
+  advantagesClassName?: string;
 }
 
 export const DescriptionCard = ({
@@ -19,16 +23,29 @@ export const DescriptionCard = ({
   description,
   descriptionClassName,
   price,
-  priceClassName,
   name,
-  nameClassName
+  nameClassName,
+  advantages,
+  advantagesClassName,
 }: DescriptionCardProps) => {
   return (
     <div className={`${cls.card} ${containerClassName}`}>
-      <div className={`${cls.card_title} ${titleClassName}`}>{title}</div>
-      {name && <div className={`${cls.card_name} ${nameClassName}`}>{name}</div>}
-      <div className={`${cls.card_description} ${descriptionClassName}`}>{description}</div>
-      {price && <div className={`${cls.card_price} ${priceClassName}`}>{price}</div>}
+      <FrontSide
+        description={description}
+        name={name}
+        price={price}
+        title={title}
+        descriptionClassName={descriptionClassName}
+        nameClassName={nameClassName}
+        titleClassName={titleClassName}
+        className={cls.card__front}
+      />
+      <BackSide
+        advantages={advantages}
+        advantagesClassName={advantagesClassName}
+        titleClassName={titleClassName}
+        className={cls.card__back}
+      />
     </div>
   );
 };

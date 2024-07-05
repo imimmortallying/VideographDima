@@ -18,15 +18,13 @@ function About({ showModal }: AboutProps) {
             <source src={BgcVideo}></source>
           </video>
           <div className={cls.about_description}>
-            Мы производим видеоконтент, который решит ваши задачи: увеличит
-            конверсию, расширит клиентскую базу, повысит узнаваемость бренда,
-            расскажет о новой услуге или акции
+            Мы занимаемся производством качественного видео-контента более 10
+            лет. Готовы взять на себя весь процесс под ключ: от разработки
+            концепции и написании сценария до монтажа в готовый продукт.
           </div>
-          {/* <div className={cls.glitch}></div> */}
         </div>
         <div className={cls.about_footer}>
           <div className={cls.about_title_second}>снимай с нами</div>
-          {/* <img src={ArrowIcon1} className={cls.about_arrowIcon}></img> */}
           <div className={cls.about_arrowIcon}></div>
           <Button
             buttonColor="thirdColor"
