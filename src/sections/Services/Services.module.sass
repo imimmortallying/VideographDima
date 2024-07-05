@@ -20,7 +20,7 @@
         display: grid
         grid-template-columns: repeat(2, 1fr)
         gap: 5rem
-        @media only screen and (max-width: 900px), (hover:none)
+        @media only screen and (max-width: 1000px), (hover:none)
             grid-template-columns: 1fr
 
     // children card
@@ -58,3 +58,5 @@
         font-size: 2.2rem
         // align-items: center
         justify-content: space-evenly
+        @include respond(phone)
+            font-size: 2.4rem
