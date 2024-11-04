@@ -1,17 +1,18 @@
 import cls from "./Portfolio.module.sass";
 import { VideoPreview } from "../../entities/VideoPrewiev/VideoPreview";
 
-import Bg1 from "../../assets/background/bg1.png";
-import Bg2 from "../../assets/background/bg2.jpg";
-import Bg3 from "../../assets/background/bg3.jpg";
-import Bg4 from "../../assets/background/bg4.jpg";
-import Bg5 from "../../assets/background/bg5.jpg";
-import Bg6 from "../../assets/background/bg6.jpg";
-import Bg7 from "../../assets/background/bg7.jpg";
-import Bg8 from "../../assets/background/bg8.jpg";
-import YouTubeVideo from "../../entities/YouTubeVideo/YouTubeVideo";
+import Bg1 from "../../assets/background/sibmain.jpg";
+import Bg2 from "../../assets/background/polith.jpg";
+import Bg3 from "../../assets/background/kom.jpg";
+import Bg4 from "../../assets/background/sibelem1.jpg";
+import Bg5 from "../../assets/background/sibelem2.jpg";
+import Bg6 from "../../assets/background/itssib.jpg";
+import Bg7 from "../../assets/background/rizon.jpg";
+import Bg8 from "../../assets/background/rezinki.jpg";
+import Bg9 from "../../assets/background/aptka.jpg";
 import { ReactNode } from "react";
 import { ModalStyles } from "../../entities/Modal/types";
+import { Video } from "./components/Video/Video";
 
 interface PortfolioProps {
   showModal: (
@@ -22,15 +23,15 @@ interface PortfolioProps {
 }
 
 const videosData = [
-  { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg1 },
-  { videoUrl: "https://www.youtube.com/watch?v=MLRccsRBXZU", imgSrc: Bg2 },
-  { videoUrl: "https://www.youtube.com/watch?v=fZkl9o-kPNk", imgSrc: Bg3 },
-  { videoUrl: "https://www.youtube.com/watch?v=jJoPeafUQTc", imgSrc: Bg4 },
-  { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg5 },
-  { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg6 },
-  { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg7 },
-  { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg8 },
-  { videoUrl: "https://www.youtube.com/watch?v=dBl_3pT0PwU", imgSrc: Bg1 },
+  { videoUrl: "https://vk.com/video_ext.php?oid=228245627&id=456241830&hd=2&autoplay=1", imgSrc: Bg1 }, // sibmain /
+  { videoUrl: "https://vk.com/video_ext.php?oid=228245627&id=456241831&hd=2&autoplay=1", imgSrc: Bg2 }, //politeh / 
+  { videoUrl: "https://vk.com/video_ext.php?oid=228245627&id=456241828&hd=2&autoplay=1", imgSrc: Bg3 }, // komandor/
+  { videoUrl: "https://vk.com/video_ext.php?oid=228245627&id=456241826&hd=2&autoplay=1", imgSrc: Bg4 }, //sib elem arct/
+  { videoUrl: "https://vk.com/video_ext.php?oid=228245627&id=456241825&hd=2&autoplay=1", imgSrc: Bg5 },//sib elem south sib/
+  { videoUrl: "https://vk.com/video_ext.php?oid=228245627&id=456241822&hd=2&autoplay=1", imgSrc: Bg6 }, // its sib/
+  { videoUrl: "https://vk.com/video_ext.php?oid=228245627&id=456241824&hd=2&autoplay=1", imgSrc: Bg7 }, //rizon
+  { videoUrl: "https://vk.com/video_ext.php?oid=228245627&id=456241817&hd=2&autoplay=1", imgSrc: Bg8 }, // rezinki/
+  { videoUrl: "https://vk.com/video_ext.php?oid=228245627&id=456241819&hd=2&autoplay=1", imgSrc: Bg9 }, // sport apteki
 ];
 
 function Portfolio({ showModal }: PortfolioProps) {
@@ -46,7 +47,7 @@ function Portfolio({ showModal }: PortfolioProps) {
             imageSrc={node.imgSrc}
             showModal={() =>
               showModal(
-                <YouTubeVideo videoUrl={node.videoUrl} />,
+                <Video url={node.videoUrl}/>,
                 {
                   body: { padding: 0 },
                 },

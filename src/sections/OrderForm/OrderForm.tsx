@@ -24,26 +24,33 @@ export const OrderForm = ({
 
   const handleSubmit = async (values: any) => {
     setLoading(true); // Устанавливаем loading в true при отправке формы
-    try {
-      // Ваша логика для отправки данных
-      console.log("Form values:", values);
-      // Имитация запроса на сервер с задержкой (можете заменить на реальный запрос)
-      await new Promise((resolve) => setTimeout(resolve, 500));
+
+    const formData = new FormData();
+    formData.append("access_key", "084ccc49-975f-4db1-a9be-07838f1c4f0a");
+    formData.append("nameInput", values.nameInput);
+    formData.append("phoneNumber", values.phoneNumber);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
       success();
-    } catch (error) {
-      console.error("Submit error:", error);
-    } finally {
-      setLoading(false); // В любом случае сбрасываем loading обратно в false
+      // Очистить значения формы после успешной отправки
+    } else {
+      console.log("Error", data);
     }
+
+    setLoading(false); // Устанавливаем loading в false после выполнения запроса
   };
 
   const success = () => {
     messageApi.open({
-      //   type: "success",
       content: "Ваша заявка успешно отправлена",
       className: `${cls.message}`,
-      //   icon: <div style={{ color: '#108ee9' }}>123</div>, // тут можно кастомизировать иконку. но как увеличить
-      // стандартную иконку type: "success" не понял. Мб в токене в app
       style: {
         marginTop: "20vh",
         fontSize: "5rem",
@@ -57,7 +64,7 @@ export const OrderForm = ({
       <div className={`${cls.orderForm_beforeCenter_bgc} ${positionGridBefore}`}></div>
       <div className={`${cls.orderForm_afterCenter_bgc} ${positionGridAfter}`}></div>
       <div className={`${cls.orderForm} ${positionClassName}`}>
-        <Form onFinish={(values) => handleSubmit(values)} className={cls.form}>
+        <Form onFinish={handleSubmit} className={cls.form}>
           <div className={cls.title}>{title}</div>
           <div className={cls.description}>{description}</div>
           <Form.Item
@@ -85,7 +92,7 @@ export const OrderForm = ({
               className={cls.submit}
               loading={loading}
             >
-              отпправить
+              отправить
             </Button>
           </Form.Item>
         </Form>

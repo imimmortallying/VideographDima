@@ -11,7 +11,7 @@ function About({ showModal }: AboutProps) {
     <>
       <div className={cls.about_beforeCenter_bgc}></div>
       <div className={cls.about_afterCenter_bgc}></div>
-      <section className={cls.about}>
+      <section className={cls.about} id="about">
         <div className={cls.about_title}>о нас</div>
         <div className={cls.about_wrapper}>
           <video className={cls.about_video} autoPlay muted loop>

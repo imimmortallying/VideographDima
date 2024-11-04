@@ -1,10 +1,6 @@
 import cls from "./Questions.module.sass";
 import { Collapse } from "antd";
 
-interface QuestionsProps {
-  className?: string;
-}
-
 const questionsData = [
   {
     label: "Из чего складывается цена видеопродакшена",
@@ -24,12 +20,12 @@ const accordionItems = questionsData.map((elem, i)=> {
     return {key: i, label: elem.label, children: <p>{elem.text}</p>} 
 })
 
-export const Questions = ({}: QuestionsProps) => {
+export const Questions = () => {
   return (
     <>
       <div className={cls.questions_beforeCenter_bgc}></div>
       <div className={cls.questions_afterCenter_bgc}></div>
-      <div className={cls.questions}>
+      <div className={cls.questions} id="questions">
         <div className={cls.questions_title}>остались вопросы?</div>
         <div className={cls.questions_body}>
           <Collapse accordion items={accordionItems} />

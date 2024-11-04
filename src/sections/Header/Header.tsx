@@ -1,7 +1,7 @@
 import cls from "./Header.module.sass";
 import Fader from "../../entities/Fader/Fader";
 import Button from "../../entities/Button/Button";
-import { TgIcon } from "../../entities/Icons/TgIcon/TgIcon";
+// import { TgIcon } from "../../entities/Icons/TgIcon/TgIcon";
 import bgVideo from "../../assets/Header/bgvideo.mp4";
 import { HeaderAnchor } from "./components/Anchor/HeaderAnchor";
 
@@ -12,8 +12,9 @@ interface Header {
 const anchorItems = [
   { title: "Главная", key: "Главная", href: "#header" },
   { title: "О студии", key: "О студии", href: "#about" },
-  { title: "услуги", key: "услуги", href: "#services" },
-  { title: "портфолио", key: "портфолио", href: "#portfolio" },
+  { title: "Портфолио", key: "портфолио", href: "#portfolio" },
+  { title: "Услуги", key: "услуги", href: "#services" },
+  { title: "Ответы на вопросы", key: "ответы на вопросы", href: "#questions" },
 ];
 
 function Header({ showModal }: Header) {
@@ -59,13 +60,13 @@ function Header({ showModal }: Header) {
             textContent="оставить заявку"
             className={cls.header_button_request}
           ></Button>
-          <Button
+          {/* <Button
             buttonStyle="rectangle"
             buttonColor="additionalColor"
             textContent="задать нам вопрос"
             className={cls.header_button_tg}
             icon={<TgIcon />}
-          ></Button>
+          ></Button> */}
         </div>
       </div>
     </header>

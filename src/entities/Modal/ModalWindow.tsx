@@ -34,7 +34,7 @@ function ModalWindow({
         width={width}
         footer={null}
         closable={false}
-        // destroyOnClose
+        destroyOnClose
       >
         {children}
       </Modal>

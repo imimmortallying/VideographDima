@@ -4,20 +4,17 @@ import { RequestForm } from "../entities/RequestForm/RequestForm";
 import SectionInfo from "../sections/Infoblock/SectionInfo";
 import ModalWindow from "../entities/Modal/ModalWindow";
 import Showreal from "../sections/Showreal/Showreal";
-import YouTubeVideo from "../entities/YouTubeVideo/YouTubeVideo";
 import About from "../sections/About/About";
 import Portfolio from "../sections/Portfolio/Portfolio";
-import { CarouselSection } from "../sections/Carousel/CarouselSection";
 import { OrderForm } from "../sections/OrderForm/OrderForm";
 import { Services } from "../sections/Services/Services";
-import { Packages } from "../sections/Packages/Packages";
 import { Team } from "../sections/Team/Team";
-import { WorkStages } from "../sections/WorkStages/WorkStages";
-import { Reviews } from "../sections/Reviews/Reviews";
+// import { Reviews } from "../sections/Reviews/Reviews";
 import { Questions } from "../sections/Questions/Questions";
 import { Achievements } from "../sections/Achievements/Achievements";
 import { AntdConfigProvider } from "./AntdConfigProvider/AntdConfigProvider";
 import { useModalWindowProps } from "../entities/useModalWindowProps/useModalWindowProps";
+import { Video } from "../sections/Portfolio/components/Video/Video";
 
 function App() {
   const { modalProps, showModal } = useModalWindowProps();
@@ -36,21 +33,18 @@ function App() {
         <Header showModal={() => showModal(<RequestForm />)} />
         <SectionInfo />
         <Showreal
-          showModal={() =>
-            showModal(
-              <YouTubeVideo
-                videoUrl={"https://www.youtube.com/watch?v=4xDzrJKXOOY"}
-              />,
-              {
-                body: { padding: 0 },
-              },
-              "80rem"
-            )
-          }
+            showModal={() =>
+              showModal(
+                <Video url="https://vk.com/video_ext.php?oid=228245627&id=456241840&hd=2&autoplay=1"/>,
+                {
+                  body: { padding: 0 },
+                },
+                "80rem"
+              )
+            }
         />
         <About showModal={() => showModal(<RequestForm />)} />
         <Portfolio showModal={showModal} />
-        <CarouselSection />
         <OrderForm
           description="Мы — видеопродакшн полного цикла. Создаем видео для YouTube и соцсетей, видео для бизнеса, проморолики, корпоративные видео. Заказать видеоролик можно прямо на сайте. Просто оставьте заявку"
           title="заказать видеоролик"
@@ -59,10 +53,8 @@ function App() {
           positionGridAfter={cls.orderForm1_afterCenter_bgc}
         />
         <Services />
-        <Packages />
         <Team />
-        <WorkStages />
-        <Reviews />
+        {/* <Reviews /> */}
         <Questions />
         <Achievements />
         <OrderForm

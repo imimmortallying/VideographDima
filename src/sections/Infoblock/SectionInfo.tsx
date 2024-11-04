@@ -33,7 +33,7 @@ function SectionInfo() {
             <p>вечнозеленый контент, который будет приводить новых клиентов</p>
           </div>
         </div>
-        <img src={Person} className={cls.person}></img>
+        <img src={Person} className={cls.person} height='500px'></img>
       </section>
     </>
   );

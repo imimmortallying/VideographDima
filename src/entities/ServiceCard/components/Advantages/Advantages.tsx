@@ -9,7 +9,7 @@ export const Advantages = ({ advantages, className }: AdvantagesProps) => {
   return (
     <div className={`${cls.advantages} ${className}`}>
       {advantages.map((el, i) => (
-        <div className={`${cls.advantage} `}>
+        <div className={`${cls.advantage} `} key={i}>
           {<span className={cls.number}>{`${i + 1}.`}</span>}
           {el}
         </div>
